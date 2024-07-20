@@ -47,19 +47,18 @@ export const HomePage: React.FC<{ blogPosts: BlogPostData[] }> = ({ blogPosts })
 
 
             <ContactModal />
-            <div className="relative justify-center items-center mt-2 drop-shadow-1xl block">
+            <div className="relative justify-center items-center -mt-32 drop-shadow-1xl block">
                 {/* <PreloadStaticImage imgSrc={mainWorkoutImage} styleProps={'h-[700px] w-full diagonal-cut-mobile  relative'} /> */}
-                <div className="place-content-center justify-center h-[700px]">
-
-                    <HeroGlow>
-                        <div className="relative top-0 z-20 mx-auto md:mt-24 max-w-3xl md:px-4 text-center">
-                            <div className="grid grid-cols-1  text-black place-content-center justify-items-center w-full mx-auto">
-                                <h1 className="text-4xl font-bold mt-10 mb-6">I build websites for <span ref={typedRef} /></h1>
-                                <p className="px-4 text-lg md:w-3/4 leading-relaxed">
-                                    I create lightning-fast websites to attract customers and make a great first impression. My sites are lightweight, responsive,
-                                    and designed with SEO, UI, and UX in mind. Experience speed, beauty, and functionality.
-                                </p>
-                                {/* <p className="px-4 text-lg md:w-3/4 leading-relaxed">
+                <div className="place-content-center justify-center h-[700px] mt-10">
+                    <div className="absolute h-[600px] w-full -mt-20 overscroll-none hero-border-radius bg-hero-gradient-background "></div>
+                    <div className="relative top-0 z-20 mx-auto md:mt-24 max-w-3xl md:px-4 text-center">
+                        <div className="grid grid-cols-1  text-black place-content-center justify-items-center w-full mx-auto">
+                            <h1 className="text-4xl font-bold mt-10 mb-6">I build websites for <span ref={typedRef} /></h1>
+                            <p className="px-4 text-lg md:w-3/4 leading-relaxed">
+                                I create lightning-fast websites to attract customers and make a great first impression. My sites are lightweight, responsive,
+                                and designed with SEO, UI, and UX in mind. Experience speed, beauty, and functionality.
+                            </p>
+                            {/* <p className="px-4 text-lg md:w-3/4 leading-relaxed">
 
 
                                     I build lightning fast websites to help attract business. A website can make or break
@@ -68,25 +67,24 @@ export const HomePage: React.FC<{ blogPosts: BlogPostData[] }> = ({ blogPosts })
 
                                 </p> */}
 
-                                <p className="mb-8 mt-4 px-4 leading-relaxed">Contact me for a free consultation</p>
-                                <div>
-                                    <button onClick={() => {
-                                        if (document) {
-                                            (document.getElementById('contact_modal') as HTMLFormElement).showModal();
-                                        }
-                                    }} className="inline-block py-4 px-8 leading-none text-black hover:text-white bg-white bg-opacity-85 hover:bg-pink-600 rounded shadow text-sm font-bold"
-                                    >Contact Me</button>
-                                </div>
+                            <p className="mb-8 mt-4 px-4 leading-relaxed">Contact me for a free consultation</p>
+                            <div>
                                 <button onClick={() => {
-                                    sportsRef.current?.scrollIntoView({
-                                        behavior: 'smooth'
-                                    });
-                                }} className="mt-6 md:mt-36">
-                                    <svg className="h-8 w-8 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">  <polyline points="6 9 12 15 18 9" /></svg>
-                                </button>
+                                    if (document) {
+                                        (document.getElementById('contact_modal') as HTMLFormElement).showModal();
+                                    }
+                                }} className="inline-block py-4 px-8 leading-none text-black hover:text-white bg-white bg-opacity-85 hover:bg-pink-600 rounded shadow text-sm font-bold"
+                                >Contact Me</button>
                             </div>
+                            <button onClick={() => {
+                                sportsRef.current?.scrollIntoView({
+                                    behavior: 'smooth'
+                                });
+                            }} className="mt-6 md:mt-36">
+                                <svg className="h-8 w-8 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">  <polyline points="6 9 12 15 18 9" /></svg>
+                            </button>
                         </div>
-                    </HeroGlow>
+                    </div>
 
                     {/* <div className="relative top-0 z-20 max-w-5xl mx-auto mt:8 md:mt-24 px-4 text-start">
                         <div className="grid grid-cols-1  text-black place-content-center justify-items-center w-full max-w-3xl mx-auto">

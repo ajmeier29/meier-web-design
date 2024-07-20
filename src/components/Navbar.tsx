@@ -14,7 +14,7 @@ export default function Navbar({ marginTop = 'mt-20' }: NavBarProps) {
 
     return (
         <>
-            <div className="top-0 py-1 lg:py-2 w-full bg-transparent lg:relative z-40">
+            <div className="top-0 py-1 lg:py-2 w-full lg:relative z-40">
                 <nav className="z-10 sticky top-0 left-0 right-0 max-w-4xl xl:max-w-5xl mx-auto px-5 py-2.5 lg:border-none lg:py-4">
                     <div className="flex items-center justify-end">
                         <div className="hidden md:block">
@@ -27,8 +27,8 @@ export default function Navbar({ marginTop = 'mt-20' }: NavBarProps) {
                                     className="hover:underline hover:underline-offset-4 hover:w-fit transition-all duration-100 ease-linear">
 
                                     <div className="dropdown dropdown-hover">
-                                        <div tabIndex={0} role="button" className="btn bg-inherit shadow-none border-none text-base font-bold text-black/60">Our Services</div>
-                                        <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                                        <div tabIndex={0} role="button" className="btn shadow-none bg-transparent border-none text-base font-bold text-black/60">Our Services</div>
+                                        <ul tabIndex={0} className="dropdown-content menu rounded-box z-[1] w-52 p-2 shadow">
                                             <li><a>Sports Training</a></li>
                                             <li><a>Adult Metabolic Classes</a></li>
                                         </ul>
@@ -60,17 +60,17 @@ export default function Navbar({ marginTop = 'mt-20' }: NavBarProps) {
             {menu ?
                 (
                     <>
-                        <div className="absolute grid grid-cols-1 mobileMenuSlide -left-[500px] bg-primary-background z-50 h-screen w-full">
+                        <div className="absolute grid grid-cols-1 mobileMenuSlide -left-[500px] z-50 h-screen w-full">
                             <div onClick={setMenuClose} className="absolute right-0 m-4">
                                 <svg className="h-8 w-8 text-slate-500" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z" />  <line x1="18" y1="6" x2="6" y2="18" />  <line x1="6" y1="6" x2="18" y2="18" /></svg>
                             </div>
-                            <div className="absolute text-black text-xl font-medium left-0 grid grid-cols-1 mx-5 mt-5 gap-4 justify-items-start bg-primary-background ">
+                            <div className="absolute text-black text-xl font-medium left-0 grid grid-cols-1 mx-5 mt-5 gap-4 justify-items-start ">
                                 <div className="ml-5">
                                     <a href="#">Home</a>
                                 </div>
                                 <div className="">
-                                    <details className="collapse collapse-arrow bg-base-200 bg-inherit">
-                                        <summary className="collapse-title text-xl ml-1 my-[-20px] font-medium bg-inherit">Our Services</summary>
+                                    <details className="collapse collapse-arrow ">
+                                        <summary className="collapse-title text-xl ml-1 my-[-20px] font-medium ">Our Services</summary>
                                         <div className="collapse-content mt-2">
                                             <div className="text-[15px] ml-2 grid grid-cols-1 gap-3">
                                                 <div>
