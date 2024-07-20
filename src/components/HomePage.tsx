@@ -56,11 +56,17 @@ export const HomePage: React.FC<{ blogPosts: BlogPostData[] }> = ({ blogPosts })
                             <div className="grid grid-cols-1  text-black place-content-center justify-items-center w-full mx-auto">
                                 <h1 className="text-4xl font-bold mt-10 mb-6">I build websites for <span ref={typedRef} /></h1>
                                 <p className="px-4 text-lg md:w-3/4 leading-relaxed">
+                                    I create lightning-fast websites to attract customers and make a great first impression. My sites are lightweight, responsive,
+                                    and designed with SEO, UI, and UX in mind. Experience speed, beauty, and functionality.
+                                </p>
+                                {/* <p className="px-4 text-lg md:w-3/4 leading-relaxed">
+
+
                                     I build lightning fast websites to help attract business. A website can make or break
                                     someone&apos;s opinion of your business. I provide lightweight, fast, response
                                     websites with SEO, UI, and UX in mind.
 
-                                </p>
+                                </p> */}
 
                                 <p className="mb-8 mt-4 px-4 leading-relaxed">Contact me for a free consultation</p>
                                 <div>
