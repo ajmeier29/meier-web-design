@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body suppressHydrationWarning={true} className={`bg-primary-background ${inter.className}`}>
+      <body suppressHydrationWarning={true} className={`font-urbanist`}>
         <SubscribeProvider>{children}</SubscribeProvider>
         <Analytics />
       </body>

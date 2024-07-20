@@ -18,12 +18,12 @@ export default function Footer() {
                 data-aos="fade-up"
                 data-aos-delay="50"
                 data-aos-duration="500"
-                className="pt-16 pb-7 ">
-                <div className="mt-8 bg-cyan-700 pt-9">
+                className="pt-16 pb-7 mt-20">
+                <div className="mt-8 bg-footer-gradient pt-9">
                     <div className="mx-auto w-full max-w-[1166px] px-4 xl:px-0">
                         <div className="flex flex-col justify-between sm:px-[18px] md:flex-row md:px-10">
                             <div className="md:w-[316px]">
-                                <h2 className="text-white font-bold text-2xl">Razzy&apos;s Sports Institute</h2>
+                                <h2 className="text-white font-bold text-2xl">Code By Andy</h2>
                                 <p className="mt-[18px] text-[15px] font-normal text-white/[80%]">Lorem ipsum dolor sit amet consectetur adipisicing
                                     elit. Eos, fugit non. Incidunt dolorum adipisci, tempore asperiores nemo odio facere officiis enim animi
                                     placeat eaque nesciunt alias beatae id, at dicta.</p>
@@ -51,7 +51,7 @@ export default function Footer() {
                                     </div>
                                     <div className="ml-[18px]">
                                         <a href="tel:+911800123444" className="font-Inter text-[14px] font-medium text-white">+1 610-555-5555</a>
-                                        <p className="font-Inter text-[12px] font-medium text-white">Support Number</p>
+                                        <p className="font-Inter text-[12px] font-medium text-white">Phone Number</p>
                                     </div>
                                 </div>
                                 <div className="mt-[23px] flex">
@@ -63,8 +63,8 @@ export default function Footer() {
                                         </svg>
                                     </div>
                                     <div className="ml-[18px]">
-                                        <a href="mailto:help@lorem.com" className="font-Inter text-[14px] font-medium text-[#fff]">help@rsi.com</a>
-                                        <p className="font-Inter text-[12px] font-medium text-[#fff]">Support Email</p>
+                                        <a href="mailto:help@lorem.com" className="font-Inter text-[14px] font-medium text-[#fff]">help@gmail.com</a>
+                                        <p className="font-Inter text-[12px] font-medium text-[#fff]">Email</p>
                                     </div>
                                 </div>
                                 <div className="mt-[23px] flex">
@@ -76,8 +76,8 @@ export default function Footer() {
                                         </svg>
                                     </div>
                                     <div className="ml-[18px]">
-                                        <a href="mailto:help@lorem.com" className="font-Inter text-[14px] font-medium text-[#fff]">Sub Nerul, Mumbia,
-                                            India, 123456</a>
+                                        <a href="mailto:help@lorem.com" className="font-Inter text-[14px] font-medium text-[#fff]">Bath,
+                                            Pa, 18014</a>
                                         <p className="font-Inter text-[12px] font-medium text-white">Address</p>
                                     </div>
                                 </div>
@@ -86,33 +86,38 @@ export default function Footer() {
                                 <div className="">
                                     <p className="text-deutziawhite font-inter text-[18px] font-medium leading-normal">Pages</p>
                                     <ul>
-                                        <li className="mt-[15px]"><a
-                                            className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
-                                            href="/">Home</a></li>
-                                        <li className="mt-[15px]"><a
-                                            className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
-                                            href="#">Sports Training</a></li>
-                                        <li className="mt-[15px]"><a
-                                            className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
-                                            href="#">Adult Metabolic Classes</a></li>
-                                        <li className="mt-[15px]"><a
-                                            className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
-                                            href="#">About</a></li>
-                                        <li className="mt-[15px]"><a
-                                            className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
-                                            href="#">Pricing</a></li>
-                                        <li className="mt-[15px]"><Link
-                                            onClick={(e) => {
-                                                if (document) {
-                                                    e.preventDefault();
-                                                    (document.getElementById('contact_modal') as HTMLFormElement).showModal();
-                                                }
-                                            }}
-                                            className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
-                                            href="#">Contact</Link></li>
-                                        <li className="mt-[15px]"><Link
-                                            className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
-                                            href="/privacy-policy">Privcay policy</Link></li>
+                                        <div className='grid grid-cols-2'>
+                                            <li className="mt-[15px]"><a
+                                                className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
+                                                href="/">Home</a></li>
+                                            <li className="mt-[15px]"><a
+                                                className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
+                                                href="#">Website Design</a></li>
+                                            <li className="mt-[15px]"><a
+                                                className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
+                                                href="#">Website Fix</a></li>
+                                            <li className="mt-[15px]"><a
+                                                className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
+                                                href="#">SEO Fix</a></li>
+                                            <li className="mt-[15px]"><a
+                                                className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
+                                                href="#">Pricing</a></li>
+                                            <li className="mt-[15px]"><a
+                                                className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
+                                                href="#">About</a></li>
+                                            <li className="mt-[15px]"><Link
+                                                onClick={(e) => {
+                                                    if (document) {
+                                                        e.preventDefault();
+                                                        (document.getElementById('contact_modal') as HTMLFormElement).showModal();
+                                                    }
+                                                }}
+                                                className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
+                                                href="#">Contact</Link></li>
+                                            <li className="mt-[15px]"><Link
+                                                className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
+                                                href="/privacy-policy">Privcay policy</Link></li>
+                                        </div>
                                     </ul>
                                 </div>
                                 {/* <div className="mt-6 flex flex-col gap-4 sm:mt-0">

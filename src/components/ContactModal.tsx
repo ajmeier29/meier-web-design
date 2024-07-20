@@ -97,7 +97,7 @@ export default function ContactModal() {
                             <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                         </form>
                         <h1 className="text-2xl text-center mt-10">
-                            Contact Us for <br />a Free Consultation
+                            Contact Me for <br />a Free Consultation
                         </h1>
                         <div>
                             <form className="grid grid-cols-1 gap-2 justify-items-center mt-5" onSubmit={handleSubmit(onSubmit)}>
