@@ -18,16 +18,16 @@ export default function Navbar({ marginTop = 'mt-20' }: NavBarProps) {
                 <nav className="z-10 sticky top-0 left-0 right-0 max-w-4xl xl:max-w-5xl mx-auto px-5 py-2.5 lg:border-none lg:py-4">
                     <div className="flex items-center justify-end">
                         <div className="hidden md:block">
-                            <ul className="flex space-x-10 text-base font-bold text-black/60 ">
+                            <ul className="flex space-x-10 text-base font-bold text-white ">
                                 <li
                                     className="hover:underline hover:underline-offset-4 hover:w-fit transition-all duration-100 ease-linear mt-3">
                                     <a href="#">Home</a>
                                 </li>
                                 <li
-                                    className="hover:underline hover:underline-offset-4 hover:w-fit transition-all duration-100 ease-linear">
+                                    className="hover:bg-transparent transition-all duration-100 text-white ease-linear">
 
                                     <div className="dropdown dropdown-hover">
-                                        <div tabIndex={0} role="button" className="btn shadow-none bg-transparent border-none text-base font-bold text-black/60">Our Services</div>
+                                        <div tabIndex={0} role="button" className="btn shadow-none hover:bg-transparent bg-transparent border-none text-base text-white font-bold">Our Services</div>
                                         <ul tabIndex={0} className="dropdown-content menu rounded-box z-[1] w-52 p-2 shadow">
                                             <li><a>Sports Training</a></li>
                                             <li><a>Adult Metabolic Classes</a></li>

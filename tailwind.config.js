@@ -25,7 +25,7 @@ module.exports = {
         'hero-gradient':
           "linear-gradient(100deg, rgba(246,230,203,1) 0%, rgba(160,147,125,1) 31%, rgba(160,147,125,1) 76%, rgba(246,230,203,1) 100%)",
         'hero-gradient-background':
-          "radial-gradient(circle, rgba(203,246,210,1) 0%, rgba(154,180,255,1) 100%)",
+          "linear-gradient(17deg, rgba(78,198,98,1) 0%, rgba(61,99,213,1) 100%)",
       },
       colors: {
         "primary-background": "#eaf0f1",
