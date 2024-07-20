@@ -16,12 +16,7 @@ export default function Navbar({ marginTop = 'mt-20' }: NavBarProps) {
         <>
             <div className="top-0 py-1 lg:py-2 w-full bg-transparent lg:relative z-40">
                 <nav className="z-10 sticky top-0 left-0 right-0 max-w-4xl xl:max-w-5xl mx-auto px-5 py-2.5 lg:border-none lg:py-4">
-                    <div className="flex items-center justify-between">
-                        <button>
-                            <div className="flex items-center space-x-2">
-                                <h2 className="text-black font-bold text-2xl">Razzy&apos;s Sports Institute</h2>
-                            </div>
-                        </button>
+                    <div className="flex items-center justify-end">
                         <div className="hidden md:block">
                             <ul className="flex space-x-10 text-base font-bold text-black/60 ">
                                 <li
@@ -30,22 +25,7 @@ export default function Navbar({ marginTop = 'mt-20' }: NavBarProps) {
                                 </li>
                                 <li
                                     className="hover:underline hover:underline-offset-4 hover:w-fit transition-all duration-100 ease-linear">
-                                    {/* <a href="#">Our services</a> */}
-                                    {/* <div className="flex w-full justify-center items-center">
 
-                                        <div className="dropdown inline-block relative">
-                                            <button className="inline-flex items-center">
-                                                <span className="mr-1">Our Services</span>
-                                                <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /> </svg>
-                                            </button>
-                                            <ul className="dropdown-menu absolute text-sm shadow-2xl hidden pt-1">
-                                                <li className=""><a className="rounded-t bg-option-bg hover:text-white hover:bg-option-hover-bg py-2 px-4 block whitespace-no-wrap"
-                                                    href="#">Sports Training</a></li>
-                                                <li className=""><a className="bg-option-bg hover:text-white hover:bg-option-hover-bg  py-2 px-4 block whitespace-no-wrap" href="#">Adult Metabolic Classes</a></li>
-                                            </ul>
-                                        </div>
-
-                                    </div> */}
                                     <div className="dropdown dropdown-hover">
                                         <div tabIndex={0} role="button" className="btn bg-inherit shadow-none border-none text-base font-bold text-black/60">Our Services</div>
                                         <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
@@ -68,10 +48,6 @@ export default function Navbar({ marginTop = 'mt-20' }: NavBarProps) {
                                     }} href="#">Contact</a>
                                 </li>
                             </ul>
-                        </div>
-                        <div className="hidden lg:flex lg:items-center gap-x-2">
-                            <button className="flex items-center text-black  justify-center px-6 py-2.5 font-semibold">Sign up</button>
-                            {/* <button className="flex items-center justify-center rounded-md bg-[#4A3BFF] text-white px-6 py-2.5 font-semibold hover:shadow-lg hover:drop-shadow transition duration-200">Login</button> */}
                         </div>
                         <div className="flex items-center justify-center md:hidden">
                             <button onClick={setMenuOpen} className="focus:outline-none text-slate-200 ">
