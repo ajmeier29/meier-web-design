@@ -21,11 +21,11 @@ module.exports = {
       backgroundImage: {
         //'hero-image': "url('/images/beachSunset.jpg')",
         // 'hero-image': "url('/images/blue-breakthrough-over-mountains.webp')",
-        // 'hero-image-mobile': "url('/images/blue-breakthrough-over-mountains-mobile.webp')",
-        'hero-gradient':
-          "linear-gradient(100deg, rgba(246,230,203,1) 0%, rgba(160,147,125,1) 31%, rgba(160,147,125,1) 76%, rgba(246,230,203,1) 100%)",
+        // 'hero-image-mobile': "url('/images/blue-breakthrough-over-mountains-mobile.webp')"
         'hero-gradient-background':
           "linear-gradient(17deg, rgba(78,198,98,1) 0%, rgba(61,99,213,1) 100%)",
+        "footer-gradient":
+          "linear-gradient(216deg, rgba(78,198,98,1) 0%, rgba(61,99,213,1) 100%)",
       },
       colors: {
         "primary-background": "#eaf0f1",
@@ -35,6 +35,9 @@ module.exports = {
       },
       fontSize: {
         "navbar-font-xl": "20px"
+      },
+      fontFamily: {
+        urbanist: 'Urbanist'
       },
       animation: {
         blob: "blob 7s infinite",

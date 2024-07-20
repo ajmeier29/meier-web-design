@@ -1,15 +1,14 @@
 'use client'
 import { BlogPostData } from "@/data/data";
 import { PreloadStaticImage } from "./PreloadImage";
-import mainWorkoutImage from '../../public/images/deadLift.webp'
-import { GymServicesProps } from "./GymServices";
-import HomePageService, { ServiceProp } from "./HomePageService";
 import ContactModal from "./ContactModal";
-import performaceImage from '../../public/images/dashboard.png';
 import Typed from 'typed.js';
 import { useEffect, useRef } from 'react';
-import HeroGlow from "./HeroGlow";
-
+import { StaticImageData } from "next/image";
+import performaceImage from '../../public/images/dashboard.png';
+import seoImage from '../../public/images/statistics.png';
+import customersImage from '../../public/images/customer.png';
+import accessImage from '../../public/images/accesibility.png';
 
 export const HomePage: React.FC<{ blogPosts: BlogPostData[] }> = ({ blogPosts }) => {
     // const { showModal, setShowModal, showSuccessMessage } = useContext(SubscribeContext)
@@ -38,13 +37,13 @@ export const HomePage: React.FC<{ blogPosts: BlogPostData[] }> = ({ blogPosts })
 
 
             <ContactModal />
-            <div className="relative justify-center items-center -mt-32 drop-shadow-1xl block">
+            <div className="relative justify-center items-center -mt-12 md:-mt-32 drop-shadow-1xl block">
                 {/* <PreloadStaticImage imgSrc={mainWorkoutImage} styleProps={'h-[700px] w-full diagonal-cut-mobile  relative'} /> */}
-                <div className="place-content-center justify-center h-[700px] mt-10">
-                    <div className="absolute h-[600px] w-full -mt-20 overscroll-none hero-border-radius bg-hero-gradient-background "></div>
+                <div className="place-content-center justify-center h-full mt-10">
+                    <div className="absolute h-[700px] md:h-[600px] w-full -mt-20 overscroll-none hero-border-radius bg-hero-gradient-background "></div>
                     <div className="relative top-0 z-20 mx-auto md:mt-24 max-w-3xl md:px-4 text-center">
                         <div className="grid grid-cols-1  text-white place-content-center justify-items-center w-full mx-auto">
-                            <h1 className="text-4xl font-bold mt-10 mb-6">I build websites for <span ref={typedRef} /></h1>
+                            <h1 className="text-[45px] lg:text-4xl font-bold mt-10 mb-6">I build websites for <span ref={typedRef} /></h1>
                             <p className="px-4 text-lg md:w-3/4 leading-relaxed">
                                 I create lightning-fast websites to attract customers and make a great first impression. My sites are lightweight, responsive,
                                 and designed with SEO, UI, and UX in mind. Experience speed, beauty, and functionality.
@@ -68,28 +67,36 @@ export const HomePage: React.FC<{ blogPosts: BlogPostData[] }> = ({ blogPosts })
                                 >Contact Me</button>
                             </div>
 
-                            <div className="grid grid-cols-4 w-[130%] text-black gap-4 mt-6">
-                                <div className="bg-white p-5 rounded-lg shadow-md">
-                                    <PreloadStaticImage imgSrc={performaceImage} styleProps={'w-10 h-10'} />
-                                    <h2 className="text-xl">
-                                        Performance
-                                    </h2>
-                                    <p className="text-sm font-light">
-                                        The websites I build are build with performance and speed in mind. Unlike Wix and other no code sites,
-                                        my websites render on the server, which provide a faster user experience for the end user.
-                                    </p>
-                                    <p>Learn More</p>
-                                    <svg className="h-8 w-8 text-slate-500" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z" />  <line x1="5" y1="12" x2="19" y2="12" />  <line x1="15" y1="16" x2="19" y2="12" />  <line x1="15" y1="8" x2="19" y2="12" /></svg>
-                                </div>
-                                <div>
-                                    SEO
-                                </div>
-                                <div>
-                                    Attract Customers
-                                </div>
-                                <div>
-                                    Accesibiliy
-                                </div>
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 place-items-center w-3/4 md:w-[90%] lg:w-[130%] text-black gap-4 mt-6">
+                                <InfoCard
+                                    image={performaceImage}
+                                    title={'Performance'}
+                                    url="#"
+                                    description="I build websites focused on performance and speed. Unlike Wix and other no-code platforms, my sites render on the server for a faster user experience.
+                                    "
+                                />
+                                <InfoCard
+                                    image={seoImage}
+                                    title={'SEO'}
+                                    url="#"
+                                    description="I build websites focused on performance and speed. Unlike Wix and other no-code platforms, my sites render on the server for a faster user experience.
+                                    "
+                                />
+                                <InfoCard
+                                    image={customersImage}
+                                    title={'Attract Customers'}
+                                    url="#"
+                                    description="I build websites focused on performance and speed. Unlike Wix and other no-code platforms, my sites render on the server for a faster user experience.
+                                    "
+                                />
+                                <InfoCard
+                                    image={accessImage}
+                                    title={'Accesibility'}
+                                    url="#"
+                                    description="I build websites focused on performance and speed. Unlike Wix and other no-code platforms, my sites render on the server for a faster user experience.
+                                    "
+                                />
+
                             </div>
                             <button onClick={() => {
                                 sportsRef.current?.scrollIntoView({
@@ -173,6 +180,31 @@ export const HomePage: React.FC<{ blogPosts: BlogPostData[] }> = ({ blogPosts })
 
                 </div> */}
             </div >
+        </>
+    )
+}
+type InfoCardProps =
+    {
+        image: StaticImageData;
+        title: string;
+        description: string;
+        url: string;
+    }
+const InfoCard = ({ image, title, description, url }: InfoCardProps) => {
+    return (
+        <>
+            <div className="bg-white p-5 rounded-lg border shadow-md grid grid-cols-1 md:gap-3 lg:gap-1 place-items-center">
+                <PreloadStaticImage imgSrc={image} styleProps={'w-10 h-10'} />
+                <h2 className="text-xl">
+                    {title}
+                </h2>
+                <p className="text-sm font-light">
+                    {description}
+                </p>
+                <a href={url} className="inline text-left">Learn More
+                    <svg className="h-5 w-5 inline" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z" />  <line x1="5" y1="12" x2="19" y2="12" />  <line x1="15" y1="16" x2="19" y2="12" />  <line x1="15" y1="8" x2="19" y2="12" /></svg>
+                </a>
+            </div>
         </>
     )
 }
