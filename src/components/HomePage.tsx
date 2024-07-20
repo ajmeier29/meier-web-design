@@ -42,8 +42,8 @@ export const HomePage: React.FC<{ blogPosts: BlogPostData[] }> = ({ blogPosts })
                 <div className="place-content-center justify-center h-full mt-10">
                     <div className="absolute h-[700px] md:h-[600px] w-full -mt-20 overscroll-none hero-border-radius bg-hero-gradient-background "></div>
                     <div className="relative top-0 z-20 mx-auto md:mt-24 max-w-3xl md:px-4 text-center">
-                        <div className="grid grid-cols-1  text-white place-content-center justify-items-center w-full mx-auto">
-                            <h1 className="text-[45px] lg:text-4xl font-bold mt-10 mb-6">I build websites for <span ref={typedRef} /></h1>
+                        <div className="grid grid-cols-1 text-white place-content-center justify-items-center w-full mx-auto">
+                            <h1 className="text-[45px] lg:text-4xl font-bold mt-10 mb-6 max-sm:px-5">I build websites for <span ref={typedRef} /></h1>
                             <p className="px-4 text-lg md:w-3/4 leading-relaxed">
                                 I create lightning-fast websites to attract customers and make a great first impression. My sites are lightweight, responsive,
                                 and designed with SEO, UI, and UX in mind. Experience speed, beauty, and functionality.
@@ -193,7 +193,11 @@ type InfoCardProps =
 const InfoCard = ({ image, title, description, url }: InfoCardProps) => {
     return (
         <>
-            <div className="bg-white p-5 rounded-lg border shadow-md grid grid-cols-1 md:gap-3 lg:gap-1 place-items-center">
+            <div
+                data-aos="fade-up"
+                data-aos-delay="50"
+                data-aos-duration="500"
+                className="bg-white p-5 rounded-lg border shadow-md grid grid-cols-1 md:gap-3 lg:gap-1 place-items-center">
                 <PreloadStaticImage imgSrc={image} styleProps={'w-10 h-10'} />
                 <h2 className="text-xl">
                     {title}

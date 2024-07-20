@@ -1,7 +1,7 @@
 'use client'
 import Link from "next/link";
 import { ReactNode, useState } from "react";
-
+import { motion } from 'framer-motion';
 
 type NavBarProps =
     {
@@ -63,58 +63,65 @@ export default function Navbar({ marginTop = 'mt-20' }: NavBarProps) {
                     </div>
                 </nav>
             </div>
-            {menu ?
-                (
-                    <>
-                        <div className="absolute grid grid-cols-1 bg-white mobileMenuSlide -left-[500px] z-50 h-screen w-full">
-                            <div onClick={setMenuClose} className="absolute right-0 m-4">
-                                <svg className="h-8 w-8 text-black" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z" />  <line x1="18" y1="6" x2="6" y2="18" />  <line x1="6" y1="6" x2="18" y2="18" /></svg>
-                            </div>
-                            <div className="absolute text-black text-xl font-medium left-0 grid grid-cols-1 mx-5 mt-5 gap-4 justify-items-start ">
-                                <div className="ml-5">
-                                    <a href="#">Home</a>
-                                </div>
-                                <div className="">
-                                    <details className="collapse collapse-arrow ">
-                                        <summary className="collapse-title text-xl ml-1 my-[-20px] font-medium ">Services</summary>
-                                        <div className="collapse-content mt-2">
-                                            <div className="text-[15px] ml-2 grid grid-cols-1 gap-3">
-                                                <div className="mt-4">
-                                                    <a href="#">Web Design</a>
-                                                </div>
-                                                <div>
-                                                    <a href="#">Website Fix</a>
-                                                </div>
-                                                <div>
-                                                    <a href="#">SEO Fix</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </details>
-                                </div>
-                                <div className="ml-5">
-                                    <a href="#">Pricing</a>
-                                </div>
-                                <div className="ml-5">
-                                    <a href="#">About</a>
-                                </div>
-                                <div onClick={() => {
-                                    if (document) {
-                                        setMenuClose();
-                                        (document.getElementById('contact_modal') as HTMLFormElement).showModal();
-                                    }
-                                }} className="ml-5">
-                                    <a href="#">Contact</a>
-                                </div>
-                            </div>
-                        </div>
-                    </>
-                )
-                :
-                (
-                    <></>
-                )}
 
+            <motion.div
+                initial={{ x: '-100%' }}
+                animate={{ x: menu ? 0 : '-100%' }}
+                transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+                style={{
+                    position: 'fixed',
+                    top: 0,
+                    left: 0,
+                    width: '250px',
+                    height: '100%',
+                    background: 'lightgray',
+                    boxShadow: '2px 0 5px rgba(0,0,0,0.5)',
+                    zIndex: 1000,
+                }}
+            >
+                <div className="absolute grid grid-cols-1 bg-white z-50 h-screen w-full">
+                    <div onClick={setMenuClose} className="absolute right-0 m-4">
+                        <svg className="h-8 w-8 text-black" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z" />  <line x1="18" y1="6" x2="6" y2="18" />  <line x1="6" y1="6" x2="18" y2="18" /></svg>
+                    </div>
+                    <div className="absolute text-black text-xl font-medium left-0 grid grid-cols-1 mx-5 mt-5 gap-4 justify-items-start ">
+                        <div className="ml-5">
+                            <a href="#">Home</a>
+                        </div>
+                        <div className="">
+                            <details className="collapse collapse-arrow ">
+                                <summary className="collapse-title text-xl ml-1 my-[-20px] font-medium ">Services</summary>
+                                <div className="collapse-content mt-2">
+                                    <div className="text-[15px] ml-2 grid grid-cols-1 gap-3">
+                                        <div className="mt-4">
+                                            <a href="#">Web Design</a>
+                                        </div>
+                                        <div>
+                                            <a href="#">Website Fix</a>
+                                        </div>
+                                        <div>
+                                            <a href="#">SEO Fix</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </details>
+                        </div>
+                        <div className="ml-5">
+                            <a href="#">Pricing</a>
+                        </div>
+                        <div className="ml-5">
+                            <a href="#">About</a>
+                        </div>
+                        <div onClick={() => {
+                            if (document) {
+                                setMenuClose();
+                                (document.getElementById('contact_modal') as HTMLFormElement).showModal();
+                            }
+                        }} className="ml-5">
+                            <a href="#">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </motion.div>
         </>
     )
 }
