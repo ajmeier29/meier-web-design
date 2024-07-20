@@ -18,7 +18,7 @@ export default function Footer() {
                 data-aos="fade-up"
                 data-aos-delay="50"
                 data-aos-duration="500"
-                className="pt-16 pb-7 ">
+                className="pt-16 pb-7 mt-20">
                 <div className="mt-8 bg-cyan-700 pt-9">
                     <div className="mx-auto w-full max-w-[1166px] px-4 xl:px-0">
                         <div className="flex flex-col justify-between sm:px-[18px] md:flex-row md:px-10">

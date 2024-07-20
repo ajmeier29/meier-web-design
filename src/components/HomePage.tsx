@@ -4,17 +4,8 @@ import { PreloadStaticImage } from "./PreloadImage";
 import mainWorkoutImage from '../../public/images/deadLift.webp'
 import { GymServicesProps } from "./GymServices";
 import HomePageService, { ServiceProp } from "./HomePageService";
-import dumbellImage from '../../public/images/weight.png'
-import workoutImage from '../../public/images/workout.png'
-import scheduleImage from '../../public/images/calendar.png'
-import pitchingImage from '../../public/images/pitcher.webp'
-import battingImage from '../../public/images/batting.jpeg'
-import fieldingImage from '../../public/images/fielding.jpeg'
-import squatImage from '../../public/images/ladies-strong-squat.jpg'
-import lungeImage from '../../public/images/ladies-lunge-together.jpg'
-import mealImage from '../../public/images/hotel-room-service-meal.jpg'
 import ContactModal from "./ContactModal";
-
+import performaceImage from '../../public/images/dashboard.png';
 import Typed from 'typed.js';
 import { useEffect, useRef } from 'react';
 import HeroGlow from "./HeroGlow";
@@ -76,6 +67,30 @@ export const HomePage: React.FC<{ blogPosts: BlogPostData[] }> = ({ blogPosts })
                                 }} className="inline-block py-4 px-8 leading-none text-black hover:text-white bg-white bg-opacity-85 hover:bg-pink-600 rounded shadow text-sm font-bold"
                                 >Contact Me</button>
                             </div>
+
+                            <div className="grid grid-cols-4 w-[130%] text-black gap-4 mt-6">
+                                <div className="bg-white p-5 rounded-lg shadow-md">
+                                    <PreloadStaticImage imgSrc={performaceImage} styleProps={'w-10 h-10'} />
+                                    <h2 className="text-xl">
+                                        Performance
+                                    </h2>
+                                    <p className="text-sm font-light">
+                                        The websites I build are build with performance and speed in mind. Unlike Wix and other no code sites,
+                                        my websites render on the server, which provide a faster user experience for the end user.
+                                    </p>
+                                    <p>Learn More</p>
+                                    <svg className="h-8 w-8 text-slate-500" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z" />  <line x1="5" y1="12" x2="19" y2="12" />  <line x1="15" y1="16" x2="19" y2="12" />  <line x1="15" y1="8" x2="19" y2="12" /></svg>
+                                </div>
+                                <div>
+                                    SEO
+                                </div>
+                                <div>
+                                    Attract Customers
+                                </div>
+                                <div>
+                                    Accesibiliy
+                                </div>
+                            </div>
                             <button onClick={() => {
                                 sportsRef.current?.scrollIntoView({
                                     behavior: 'smooth'
@@ -122,7 +137,7 @@ export const HomePage: React.FC<{ blogPosts: BlogPostData[] }> = ({ blogPosts })
                         <HeroGlow />
                     </div> */}
                 </div>
-                <div className="grid grid-cols-1 gap-4 mt-10 mx-3 md:mx-40">
+                {/* <div className="grid grid-cols-1 gap-4 mt-10 mx-3 md:mx-40">
                     <div className="grid grid-cols-1 gap-4 place-content-center w-full flex-col">
                         <div ref={sportsRef} className="rounded-box grid h-10 text-2xl place-items-center">Sport Training Services</div>
                         <div className="divider"></div>
@@ -156,65 +171,65 @@ export const HomePage: React.FC<{ blogPosts: BlogPostData[] }> = ({ blogPosts })
                             ) : (<></>)}
                     </div>
 
-                </div>
+                </div> */}
             </div >
         </>
     )
 }
 
-const baseballServices: ServiceProp[] =
-    [
-        {
-            src: pitchingImage,
-            title: 'Pitching Lessons',
-            description: 'We’re all about helping pitchers reach their full potential. Whether you’re a youth player dreaming of the big leagues or a seasoned professional honing your craft, our world-class training programs have got you covered.'
-        },
-        {
-            src: battingImage,
-            title: 'Batting Lessons',
-            description: 'We’re all about helping pitchers reach their full potential. Whether you’re a youth player dreaming of the big leagues or a seasoned professional honing your craft, our world-class training programs have got you covered.'
-        },
-        {
-            src: fieldingImage,
-            title: 'Fielding Lessons',
-            description: 'We’re all about helping pitchers reach their full potential. Whether you’re a youth player dreaming of the big leagues or a seasoned professional honing your craft, our world-class training programs have got you covered.'
-        }
-    ]
+// const baseballServices: ServiceProp[] =
+//     [
+//         {
+//             src: pitchingImage,
+//             title: 'Pitching Lessons',
+//             description: 'We’re all about helping pitchers reach their full potential. Whether you’re a youth player dreaming of the big leagues or a seasoned professional honing your craft, our world-class training programs have got you covered.'
+//         },
+//         {
+//             src: battingImage,
+//             title: 'Batting Lessons',
+//             description: 'We’re all about helping pitchers reach their full potential. Whether you’re a youth player dreaming of the big leagues or a seasoned professional honing your craft, our world-class training programs have got you covered.'
+//         },
+//         {
+//             src: fieldingImage,
+//             title: 'Fielding Lessons',
+//             description: 'We’re all about helping pitchers reach their full potential. Whether you’re a youth player dreaming of the big leagues or a seasoned professional honing your craft, our world-class training programs have got you covered.'
+//         }
+//     ]
 
-const metabolicServices: ServiceProp[] =
-    [
-        {
-            src: squatImage,
-            title: 'Adult Metabolic Classes',
-            description: 'We’re all about helping pitchers reach their full potential. Whether you’re a youth player dreaming of the big leagues or a seasoned professional honing your craft, our world-class training programs have got you covered.'
-        },
-        {
-            src: lungeImage,
-            title: 'Functional Equipment',
-            description: 'We’re all about helping pitchers reach their full potential. Whether you’re a youth player dreaming of the big leagues or a seasoned professional honing your craft, our world-class training programs have got you covered.'
-        },
-        {
-            src: mealImage,
-            title: 'Meal Planning',
-            description: 'We’re all about helping pitchers reach their full potential. Whether you’re a youth player dreaming of the big leagues or a seasoned professional honing your craft, our world-class training programs have got you covered.'
-        }
-    ]
+// const metabolicServices: ServiceProp[] =
+//     [
+//         {
+//             src: squatImage,
+//             title: 'Adult Metabolic Classes',
+//             description: 'We’re all about helping pitchers reach their full potential. Whether you’re a youth player dreaming of the big leagues or a seasoned professional honing your craft, our world-class training programs have got you covered.'
+//         },
+//         {
+//             src: lungeImage,
+//             title: 'Functional Equipment',
+//             description: 'We’re all about helping pitchers reach their full potential. Whether you’re a youth player dreaming of the big leagues or a seasoned professional honing your craft, our world-class training programs have got you covered.'
+//         },
+//         {
+//             src: mealImage,
+//             title: 'Meal Planning',
+//             description: 'We’re all about helping pitchers reach their full potential. Whether you’re a youth player dreaming of the big leagues or a seasoned professional honing your craft, our world-class training programs have got you covered.'
+//         }
+//     ]
 
-const gymServices: GymServicesProps[] = [
+// const gymServices: GymServicesProps[] = [
 
-    {
-        title: 'High-Intensity Workouts',
-        image: workoutImage,
-        description: 'Our expert coaches guide you through functional movements, strength training, and conditioning exercises.'
-    },
-    {
-        title: 'Functional Equipment',
-        image: dumbellImage,
-        description: 'Experience functional fitness at its best with our cutting-edge equipment and personalized training'
-    },
-    {
-        title: 'Flexible Class Schedules',
-        image: scheduleImage,
-        description: 'Our gym offers flexible class times to fit your busy schedule'
-    }
-]
+//     {
+//         title: 'High-Intensity Workouts',
+//         image: workoutImage,
+//         description: 'Our expert coaches guide you through functional movements, strength training, and conditioning exercises.'
+//     },
+//     {
+//         title: 'Functional Equipment',
+//         image: dumbellImage,
+//         description: 'Experience functional fitness at its best with our cutting-edge equipment and personalized training'
+//     },
+//     {
+//         title: 'Flexible Class Schedules',
+//         image: scheduleImage,
+//         description: 'Our gym offers flexible class times to fit your busy schedule'
+//     }
+// ]
