@@ -48,22 +48,16 @@ export const HomePage: React.FC<{ blogPosts: BlogPostData[] }> = ({ blogPosts })
                                 I create lightning-fast websites to attract customers and make a great first impression. My sites are lightweight, responsive,
                                 and designed with SEO, UI, and UX in mind. Experience speed, beauty, and functionality.
                             </p>
-                            {/* <p className="px-4 text-lg md:w-3/4 leading-relaxed">
-
-
-                                    I build lightning fast websites to help attract business. A website can make or break
-                                    someone&apos;s opinion of your business. I provide lightweight, fast, response
-                                    websites with SEO, UI, and UX in mind.
-
-                                </p> */}
 
                             <p className="mb-8 mt-4 px-4 leading-relaxed">Contact me for a free consultation</p>
                             <div>
-                                <button onClick={() => {
-                                    if (document) {
-                                        (document.getElementById('contact_modal') as HTMLFormElement).showModal();
-                                    }
-                                }} className="inline-block py-4 px-8 leading-none text-black hover:text-white bg-white bg-opacity-85 hover:bg-pink-600 rounded shadow text-sm font-bold"
+                                <button
+                                    aria-label="Contact Me"
+                                    onClick={() => {
+                                        if (document) {
+                                            (document.getElementById('contact_modal') as HTMLFormElement).showModal();
+                                        }
+                                    }} className="inline-block py-4 px-8 leading-none text-black hover:text-white bg-white bg-opacity-85 hover:bg-pink-600 rounded shadow text-sm font-bold"
                                 >Contact Me</button>
                             </div>
 
