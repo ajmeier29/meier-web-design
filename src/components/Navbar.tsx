@@ -55,7 +55,9 @@ export default function Navbar({ marginTop = 'mt-20' }: NavBarProps) {
                             </ul>
                         </div>
                         <div className="flex items-center justify-center md:hidden">
-                            <button onClick={setMenuOpen} className="focus:outline-none text-white ">
+                            <button
+                                aria-label="Open Menu"
+                                onClick={setMenuOpen} className="focus:outline-none text-white ">
                                 <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 20 20" aria-hidden="true"
                                     className="text-2xl text-white focus:outline-none active:scale-110 active:text-red-500" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clipRule="evenodd"></path></svg>
                             </button>
@@ -80,7 +82,9 @@ export default function Navbar({ marginTop = 'mt-20' }: NavBarProps) {
                 }}
             >
                 <div className="absolute grid grid-cols-1 bg-white z-50 h-screen w-full">
-                    <div onClick={setMenuClose} className="absolute right-0 m-4">
+                    <div
+                        aria-label="Close Menu"
+                        onClick={setMenuClose} className="absolute right-0 m-4">
                         <svg className="h-8 w-8 text-black" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z" />  <line x1="18" y1="6" x2="6" y2="18" />  <line x1="6" y1="6" x2="18" y2="18" /></svg>
                     </div>
                     <div className="absolute text-black text-xl font-medium left-0 grid grid-cols-1 mx-5 mt-5 gap-4 justify-items-start ">
