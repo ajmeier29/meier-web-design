@@ -86,33 +86,38 @@ export default function Footer() {
                                 <div className="">
                                     <p className="text-deutziawhite font-inter text-[18px] font-medium leading-normal">Pages</p>
                                     <ul>
-                                        <li className="mt-[15px]"><a
-                                            className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
-                                            href="/">Home</a></li>
-                                        <li className="mt-[15px]"><a
-                                            className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
-                                            href="#">Sports Training</a></li>
-                                        <li className="mt-[15px]"><a
-                                            className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
-                                            href="#">Adult Metabolic Classes</a></li>
-                                        <li className="mt-[15px]"><a
-                                            className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
-                                            href="#">About</a></li>
-                                        <li className="mt-[15px]"><a
-                                            className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
-                                            href="#">Pricing</a></li>
-                                        <li className="mt-[15px]"><Link
-                                            onClick={(e) => {
-                                                if (document) {
-                                                    e.preventDefault();
-                                                    (document.getElementById('contact_modal') as HTMLFormElement).showModal();
-                                                }
-                                            }}
-                                            className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
-                                            href="#">Contact</Link></li>
-                                        <li className="mt-[15px]"><Link
-                                            className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
-                                            href="/privacy-policy">Privcay policy</Link></li>
+                                        <div className='grid grid-cols-2'>
+                                            <li className="mt-[15px]"><a
+                                                className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
+                                                href="/">Home</a></li>
+                                            <li className="mt-[15px]"><a
+                                                className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
+                                                href="#">Website Design</a></li>
+                                            <li className="mt-[15px]"><a
+                                                className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
+                                                href="#">Website Fix</a></li>
+                                            <li className="mt-[15px]"><a
+                                                className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
+                                                href="#">SEO Fix</a></li>
+                                            <li className="mt-[15px]"><a
+                                                className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
+                                                href="#">Pricing</a></li>
+                                            <li className="mt-[15px]"><a
+                                                className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
+                                                href="#">About</a></li>
+                                            <li className="mt-[15px]"><Link
+                                                onClick={(e) => {
+                                                    if (document) {
+                                                        e.preventDefault();
+                                                        (document.getElementById('contact_modal') as HTMLFormElement).showModal();
+                                                    }
+                                                }}
+                                                className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
+                                                href="#">Contact</Link></li>
+                                            <li className="mt-[15px]"><Link
+                                                className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
+                                                href="/privacy-policy">Privcay policy</Link></li>
+                                        </div>
                                     </ul>
                                 </div>
                                 {/* <div className="mt-6 flex flex-col gap-4 sm:mt-0">
