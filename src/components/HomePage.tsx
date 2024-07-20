@@ -72,29 +72,25 @@ export const HomePage: React.FC<{ blogPosts: BlogPostData[] }> = ({ blogPosts })
                                     image={performaceImage}
                                     title={'Performance'}
                                     url="#"
-                                    description="I build websites focused on performance and speed. Unlike Wix and other no-code platforms, my sites render on the server for a faster user experience.
-                                    "
+                                    description="I build websites focused on performance and speed. Unlike Wix and other no-code platforms, my sites render on the server for a faster user experience."
                                 />
                                 <InfoCard
                                     image={seoImage}
                                     title={'SEO'}
                                     url="#"
-                                    description="I build websites focused on performance and speed. Unlike Wix and other no-code platforms, my sites render on the server for a faster user experience.
-                                    "
+                                    description="My websites include the proper SEO to make sure you get on to the front page of Google resulting in more visits to your website."
                                 />
                                 <InfoCard
                                     image={customersImage}
                                     title={'Attract Customers'}
                                     url="#"
-                                    description="I build websites focused on performance and speed. Unlike Wix and other no-code platforms, my sites render on the server for a faster user experience.
-                                    "
+                                    description="My websites are visually appealing and responsive. This will build trust with the users resulting in more customers."
                                 />
                                 <InfoCard
                                     image={accessImage}
                                     title={'Accesibility'}
                                     url="#"
-                                    description="I build websites focused on performance and speed. Unlike Wix and other no-code platforms, my sites render on the server for a faster user experience.
-                                    "
+                                    description="Along with SEO, accessibiliy is an important feature to any website. This allows people with special needs to navigate your webpsite."
                                 />
 
                             </div>
@@ -197,12 +193,12 @@ const InfoCard = ({ image, title, description, url }: InfoCardProps) => {
                 data-aos="fade-up"
                 data-aos-delay="50"
                 data-aos-duration="500"
-                className="bg-white p-5 rounded-lg border shadow-md grid grid-cols-1 md:gap-3 lg:gap-1 place-items-center">
+                className="bg-white p-5 h-64 rounded-lg border shadow-md grid grid-cols-1 md:gap-3 lg:gap-1 place-items-center">
                 <PreloadStaticImage imgSrc={image} styleProps={'w-10 h-10'} />
                 <h2 className="text-xl">
                     {title}
                 </h2>
-                <p className="text-sm font-light">
+                <p className="text-sm h-28 font-light">
                     {description}
                 </p>
                 <a href={url} className="inline text-left">Learn More
