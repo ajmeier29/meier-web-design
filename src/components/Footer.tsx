@@ -85,8 +85,9 @@ export default function Footer() {
                             <div className="mt-6 flex w-full flex-col justify-between text-white sm:flex-row md:mt-0 md:max-w-[341px]">
                                 <div className="">
                                     <p className="text-deutziawhite font-inter text-[18px] font-medium leading-normal">Pages</p>
-                                    <ul>
-                                        <div className='grid grid-cols-2'>
+                                    <div className='grid grid-cols-2 gap-3'>
+                                        <ul>
+
                                             <li className="mt-[15px]"><a
                                                 className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
                                                 href="/">Home</a></li>
@@ -99,6 +100,8 @@ export default function Footer() {
                                             <li className="mt-[15px]"><a
                                                 className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
                                                 href="#">SEO Fix</a></li>
+                                        </ul>
+                                        <ul>
                                             <li className="mt-[15px]"><a
                                                 className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
                                                 href="#">Pricing</a></li>
@@ -117,8 +120,8 @@ export default function Footer() {
                                             <li className="mt-[15px]"><Link
                                                 className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
                                                 href="/privacy-policy">Privcay policy</Link></li>
-                                        </div>
-                                    </ul>
+                                        </ul>
+                                    </div>
                                 </div>
                                 {/* <div className="mt-6 flex flex-col gap-4 sm:mt-0">
                                     <p className="text-deutziawhite font-inter text-[18px] font-medium">Download the app</p>
@@ -137,7 +140,7 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section >
         </>
     )
 }
