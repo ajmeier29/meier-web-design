@@ -194,7 +194,7 @@ const InfoCard = ({ image, title, description, url }: InfoCardProps) => {
                 data-aos="fade-up"
                 data-aos-delay="50"
                 data-aos-duration="500"
-                className="bg-white p-5 h-64 rounded-lg border shadow-md grid grid-cols-1 md:gap-3 lg:gap-1 place-items-center">
+                className="bg-white p-5 h-72 rounded-lg border shadow-md grid grid-cols-1 md:gap-3 lg:gap-1 place-items-center">
                 <PreloadStaticImage imgSrc={image} styleProps={'w-10 h-10'} />
                 <h2 className="text-xl">
                     {title}
