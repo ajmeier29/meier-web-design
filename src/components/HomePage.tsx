@@ -9,6 +9,7 @@ import performaceImage from '../../public/images/dashboard.png';
 import seoImage from '../../public/images/statistics.png';
 import customersImage from '../../public/images/customer.png';
 import accessImage from '../../public/images/accesibility.png';
+import responsiveImage from '../../public/images/responsive.png';
 
 export const HomePage: React.FC<{ blogPosts: BlogPostData[] }> = ({ blogPosts }) => {
     // const { showModal, setShowModal, showSuccessMessage } = useContext(SubscribeContext)
@@ -19,7 +20,7 @@ export const HomePage: React.FC<{ blogPosts: BlogPostData[] }> = ({ blogPosts })
 
     useEffect(() => {
         const typed = new Typed(typedRef.current, {
-            strings: ['business', 'bars', 'gyms', 'resturants', 'everyone.'],
+            strings: ['business', 'bars', 'gyms', 'restaurants', 'everyone.'],
             startDelay: 300,
             typeSpeed: 100,
             backSpeed: 100,
@@ -81,11 +82,17 @@ export const HomePage: React.FC<{ blogPosts: BlogPostData[] }> = ({ blogPosts })
                                     description="My websites are visually appealing and responsive. This will build trust with the users resulting in more customers."
                                 />
                                 <InfoCard
-                                    image={accessImage}
-                                    title={'Accesibility'}
+                                    image={responsiveImage}
+                                    title={'Responsive'}
+                                    url="#"
+                                    description="My websites are built for desktop and mobile. They will look visually stunning as on all devices and screen sizes."
+                                />
+                                {/* <InfoCard
+                                    image={responsiveImage}
+                                    title={'Responsive'}
                                     url="#"
                                     description="Along with SEO, accessibiliy is an important feature to any website. This allows people with special needs to navigate your webpsite."
-                                />
+                                /> */}
 
                             </div>
                             <button onClick={() => {
