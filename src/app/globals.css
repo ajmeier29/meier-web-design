@@ -5,6 +5,13 @@
 @tailwind utilities;
 
 
+:root {
+  --light-primary-one: #4ec662;
+  --light-primary-two: #3d63d5;
+}
+
+
+
 @keyframes slideInFromBottom {
     0% {
         transform: translateY(50%);
@@ -117,4 +124,17 @@
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
+}
+
+.gradient-shadow {
+    position: relative;
+}
+.gradient-shadow::before {
+    content: "";
+    position: absolute;
+    inset: -7px; /* control the spread */
+    /* control the offsets */
+    z-index: -1; /* place the element behind */
+    background: linear-gradient(20deg, var(--light-primary-one), var(--light-primary-two)); /* your gradient here */
+    filter: blur(18px); /* control the blur */
 }
