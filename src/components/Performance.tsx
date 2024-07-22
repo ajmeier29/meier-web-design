@@ -44,7 +44,7 @@ export default function Performance() {
                                     color='primary-check inline'
                                 />
                                 <div className='ml-4 inline'>
-                                    Preloaded images for easy viewing
+                                    Images are preloaded to avoid page shift and a better user experience.
                                 </div>
                             </li>
                             <li className='mt-2'>
@@ -54,7 +54,7 @@ export default function Performance() {
                                     color='primary-check inline'
                                 />
                                 <div className='ml-4 inline'>
-                                    Preloaded images for easy viewing
+                                    Lazy Loading - the website only loads what is viewed and the rest as you scroll.
                                 </div>
                             </li>
                             <li className='mt-2'>
