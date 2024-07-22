@@ -16,7 +16,7 @@ export const HomePage: React.FC<{ blogPosts: BlogPostData[] }> = ({ blogPosts })
     // const { showModal, setShowModal, showSuccessMessage } = useContext(SubscribeContext)
     // const openModal = () => setShowModal(true);
     // const closeModal = () => setShowModal(false);
-    const sportsRef = useRef<HTMLDivElement | null>(null);
+    const featuresRef = useRef<HTMLDivElement | null>(null);
     const typedRef = useRef(null);
 
     useEffect(() => {
@@ -100,7 +100,7 @@ export const HomePage: React.FC<{ blogPosts: BlogPostData[] }> = ({ blogPosts })
                                 More Information
                             </div>
                             <button onClick={() => {
-                                sportsRef.current?.scrollIntoView({
+                                featuresRef.current?.scrollIntoView({
                                     behavior: 'smooth'
                                 });
                             }} className="mt-1">
@@ -110,7 +110,10 @@ export const HomePage: React.FC<{ blogPosts: BlogPostData[] }> = ({ blogPosts })
 
                     </div>
 
-                    <div className="grid grid-cols-1 text-white place-content-center justify-items-center w-full">
+                    <div
+                        ref={featuresRef}
+                        className="grid grid-cols-1 gap-24 lg:gap-36 text-white mt-12 place-content-center justify-items-center w-full">
+                        <Performance />
                         <Performance />
                     </div>
 

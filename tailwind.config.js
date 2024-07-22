@@ -29,6 +29,7 @@ module.exports = {
       },
       colors: {
         "primary-background": "#eaf0f1",
+        "primary-check": "#14a935",
         "option-hover-bg": "#3f8790",
         "option-bg": "#c0c7c8",
         "primary-hover": "pink-600",
