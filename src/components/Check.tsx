@@ -10,7 +10,7 @@ export default function Check({ color, hHeight, wWidth }: CheckProps) {
     const height: string = `h-${hHeight}`
     const width: string = `w-${wWidth}`
     const textColor: string = `text-${color}`
-    const style: string = `${height} ${width} ${textColor}`
+    const style: string = `${height} ${width} ${textColor} text-primary-check`
     console.log(`style: ${style}`)
     return (
         <>
