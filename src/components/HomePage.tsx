@@ -9,17 +9,19 @@ import performaceImage from '../../public/images/dashboard.png';
 import seoImage from '../../public/images/statistics.png';
 import customersImage from '../../public/images/customer.png';
 import accessImage from '../../public/images/accesibility.png';
+import responsiveImage from '../../public/images/responsive.png';
+import Performance from "./Performance";
 
 export const HomePage: React.FC<{ blogPosts: BlogPostData[] }> = ({ blogPosts }) => {
     // const { showModal, setShowModal, showSuccessMessage } = useContext(SubscribeContext)
     // const openModal = () => setShowModal(true);
     // const closeModal = () => setShowModal(false);
-    const sportsRef = useRef<HTMLDivElement | null>(null);
+    const featuresRef = useRef<HTMLDivElement | null>(null);
     const typedRef = useRef(null);
 
     useEffect(() => {
         const typed = new Typed(typedRef.current, {
-            strings: ['business', 'bars', 'gyms', 'resturants', 'everyone.'],
+            strings: ['business', 'bars', 'gyms', 'restaurants', 'everyone.'],
             startDelay: 300,
             typeSpeed: 100,
             backSpeed: 100,
@@ -39,10 +41,10 @@ export const HomePage: React.FC<{ blogPosts: BlogPostData[] }> = ({ blogPosts })
             <ContactModal />
             <div className="relative justify-center items-center -mt-12 md:-mt-32 drop-shadow-1xl block">
                 {/* <PreloadStaticImage imgSrc={mainWorkoutImage} styleProps={'h-[700px] w-full diagonal-cut-mobile  relative'} /> */}
-                <div className="place-content-center justify-center h-full mt-10">
+                <div className="grid grid-cols-1 h-full mt-10">
                     <div className="absolute h-[700px] md:h-[600px] w-full -mt-20 overscroll-none hero-border-radius bg-hero-gradient-background "></div>
                     <div className="relative top-0 z-20 mx-auto md:mt-24 max-w-3xl md:px-4 text-center">
-                        <div className="grid grid-cols-1 text-white place-content-center justify-items-center w-full mx-auto">
+                        <div className="grid grid-cols-1 text-white place-content-center justify-items-center w-full">
                             <h1 className="text-[45px] lg:text-4xl font-bold mt-10 mb-6 max-sm:px-5">I build websites for <span ref={typedRef} /></h1>
                             <p className="px-4 text-lg md:w-3/4 leading-relaxed">
                                 I create lightning-fast websites to attract customers and make a great first impression. My sites are lightweight, responsive,
@@ -81,21 +83,38 @@ export const HomePage: React.FC<{ blogPosts: BlogPostData[] }> = ({ blogPosts })
                                     description="My websites are visually appealing and responsive. This will build trust with the users resulting in more customers."
                                 />
                                 <InfoCard
-                                    image={accessImage}
-                                    title={'Accesibility'}
+                                    image={responsiveImage}
+                                    title={'Responsive'}
+                                    url="#"
+                                    description="My websites are built for desktop and mobile. They will look visually stunning as on all devices and screen sizes."
+                                />
+                                {/* <InfoCard
+                                    image={responsiveImage}
+                                    title={'Responsive'}
                                     url="#"
                                     description="Along with SEO, accessibiliy is an important feature to any website. This allows people with special needs to navigate your webpsite."
-                                />
+                                /> */}
 
                             </div>
+                            <div className="text-black mt-6">
+                                More Information
+                            </div>
                             <button onClick={() => {
-                                sportsRef.current?.scrollIntoView({
+                                featuresRef.current?.scrollIntoView({
                                     behavior: 'smooth'
                                 });
-                            }} className="mt-6 md:mt-36">
+                            }} className="mt-1">
                                 <svg className="h-8 w-8 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">  <polyline points="6 9 12 15 18 9" /></svg>
                             </button>
                         </div>
+
+                    </div>
+
+                    <div
+                        ref={featuresRef}
+                        className="grid grid-cols-1 gap-24 lg:gap-36 text-white mt-12 place-content-center justify-items-center w-full">
+                        <Performance />
+                        <Performance />
                     </div>
 
                     {/* <div className="relative top-0 z-20 max-w-5xl mx-auto mt:8 md:mt-24 px-4 text-start">
@@ -187,7 +206,7 @@ const InfoCard = ({ image, title, description, url }: InfoCardProps) => {
                 data-aos="fade-up"
                 data-aos-delay="50"
                 data-aos-duration="500"
-                className="bg-white p-5 h-64 rounded-lg border shadow-md grid grid-cols-1 md:gap-3 lg:gap-1 place-items-center">
+                className="bg-white p-5 h-72 rounded-lg border shadow-md grid grid-cols-1 md:gap-3 lg:gap-1 place-items-center">
                 <PreloadStaticImage imgSrc={image} styleProps={'w-10 h-10'} />
                 <h2 className="text-xl">
                     {title}
